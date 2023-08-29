@@ -11,7 +11,7 @@ else: /* rendering in editor body */
         <div class="container relative  grid grid-cols-1 lg:grid-cols-2 lg:gap-x-4 max-w-[945px]">
                 <?php
                   $loop = new WP_Query( array(
-                      'post_type' => 'agenda',
+                      'post_type' => 'documenten',
                       'posts_per_page' => 3,
                       'orderby' => 'date',
                       'order' => 'DECS',
