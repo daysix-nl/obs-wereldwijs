@@ -8,7 +8,7 @@ else: /* rendering in editor body */
     ?>
 
     <!-- hero -->
-    <section class="sticky top-0 overflow-x-hidden">
+    <section class="sticky top-0 overflow-x-hidden z-[-1]">
       <div class="relative">
           <div class=" w-screen h-[390px] md:h-[100vh] bg-cream"></div>
           <img class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-screen  md:w-[90vw] " src="/wp-content/themes/obs-wereldwijs/img/local/hero.png" alt="">
