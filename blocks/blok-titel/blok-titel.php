@@ -16,7 +16,7 @@ else: /* rendering in editor body */
           </svg>
         </div>
 
-        <a href="#down" class="absolute z-10 top-[20px] left-1/2 transform -translate-x-1/2 hidden md:flex cursor-pointer">
+        <a href="#down" class="absolute z-10 top-[50px] left-1/2 transform -translate-x-1/2 hidden md:flex cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
               <g id="Group_24" data-name="Group 24" transform="translate(-810 -889)">
                 <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(810 889)" fill="none" stroke="#df4550" stroke-width="3">
