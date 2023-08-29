@@ -95,7 +95,9 @@
               </div>
               <div class="grid grid-cols-1 col-span-1">
                 <p class="text-13 lg:text-17 leading-14 lg:leading-28 text-blue font-bold max-w-[124px] md:max-w-[unset]"><?php the_field('stichting_auro', 'option'); ?></p>
-                <?php include $_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/obs-wereldwijs/img/icons/auro.php'; ?>
+                <a href="https://stichtingauro.nl/">
+                  <?php include $_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/obs-wereldwijs/img/icons/auro.php'; ?>
+                </a>
             </div>
           </div>
         </div>
