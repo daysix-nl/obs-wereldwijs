@@ -21,7 +21,7 @@ else: /* rendering in editor body */
               </span>
               <div class="flex flex-col">
                 <span class="underline-text w-fit">Bekijk hier</span>
-                <span class="underline-text w-fit">alle documentens</span>
+                <span class="underline-text w-fit">alle documenten</span>
               </div>
             </a>
           </div>
