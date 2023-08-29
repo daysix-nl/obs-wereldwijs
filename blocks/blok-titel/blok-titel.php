@@ -8,7 +8,7 @@ else: /* rendering in editor body */
     ?>
 
     <!-- Welkom -->
-    <section class="<?php echo get_field("swoosh") ? "w-screen mt-[-80px]  md:mt-[-180px]" : "" ?>  relative z-10 ">
+    <section id="down" class="<?php echo get_field("swoosh") ? "w-screen mt-[-80px]  md:mt-[-180px]" : "" ?>  relative z-10 ">
       <?php if(get_field("swoosh")): ?>
         <div class="w-screen ">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1441.84 113.47"  xml:space="preserve">
@@ -43,6 +43,5 @@ else: /* rendering in editor body */
           </div>
         </div>
     </section>
-    <div id="down"></div>
 
 <?php endif; ?>
