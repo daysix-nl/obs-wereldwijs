@@ -69,7 +69,7 @@ else: /* rendering in editor body */
                                 </button>
 
                                 <div id="modal-<?= $counter ?>" class="modal hidden  fixed top-0 left-0 right-0 w-screen h-screen bg-[#707070]/[0.5] z-[60] close-modals">
-                                    <div class="modal-content max-w-[95vw] w-[718px] max-h-[80vh] overflow-scroll bg-white p-2 md:p-4 rounded-[15px] m-auto">
+                                    <div class="modal-content max-w-[95vw] w-[718px] max-h-[70vh] md:max-h-[80vh] overflow-scroll bg-white p-2 md:p-4 rounded-[15px] m-auto">
                                             <div>
                                             <div class="flex justify-between pb-2">
                                                 <h4 class="text-red text-20 leading-25 md:text-30 md:leading-36 font-bold max-w-[420px]"><?= ucfirst($title) ?></h4>
@@ -160,7 +160,7 @@ else: /* rendering in editor body */
                                 </button>
 
                                 <div id="modal-<?= $counter ?>" class="modal hidden  fixed top-0 left-0 right-0 w-screen h-screen bg-[#707070]/[0.5] z-[60] close-modals">
-                                    <div class="modal-content max-w-[95vw] w-[718px] max-h-[80vh] overflow-scroll bg-white p-2 md:p-4 rounded-[15px] m-auto">
+                                    <div class="modal-content max-w-[95vw] w-[718px] max-h-[70vh] md:max-h-[80vh] overflow-scroll bg-white p-2 md:p-4 rounded-[15px] m-auto">
                                             <div>
                                             <div class="flex justify-between pb-2">
                                                 <h4 class="text-red text-20 leading-25 md:text-30 md:leading-36 font-bold max-w-[420px]"><?= ucfirst($title) ?></h4>
