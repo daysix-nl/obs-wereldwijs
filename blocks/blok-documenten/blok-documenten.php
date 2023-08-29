@@ -24,7 +24,7 @@ else: /* rendering in editor body */
 
                     <div class="col-span-1 mb-1 md:mb-[15px] last-of-type:mb-0">
                         <div class="max-w-[200px] md:max-w-[416px] lg:max-w-[unset] mx-auto lg:m-0">
-                            <a href="<?php the_field("document", $post_id); ?>" class="w-[200px] md:w-[416px] h-[38px] md:h-[65px] bg-blue rounded-[7px] md:rounded-[15px] py-1 md:py-[25px] px-1 md:px-[35px] flex space-x-1 md:space-x-3 lg:w-full  items-center">
+                            <a target="_blank" href="<?php the_field("document", $post_id); ?>" class="w-[200px] md:w-[416px] h-[38px] md:h-[65px] bg-blue rounded-[7px] md:rounded-[15px] py-1 md:py-[25px] px-1 md:px-[35px] flex space-x-1 md:space-x-3 lg:w-full  items-center">
                                 <span class="block w-[20px]  md:w-[35px]">
                                     <?php include $_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/obs-wereldwijs/img/icons/download-white.php'; ?>
                                 </span>
