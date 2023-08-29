@@ -5,10 +5,10 @@
 //   margin-top: 0;
 // }
 
-// body {
-//   overflow-x: hidden;
-//   overflow-y: scroll;
-// }
+body {
+  height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+}
 
 // * {
 //   border: red solid 1px;
