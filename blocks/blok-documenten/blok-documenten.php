@@ -12,7 +12,7 @@ else: /* rendering in editor body */
                 <?php
                   $loop = new WP_Query( array(
                       'post_type' => 'documenten',
-                      'posts_per_page' => 3,
+                      'posts_per_page' => -1,
                       'orderby' => 'date',
                       'order' => 'DECS',
                       'offset' => 0,
