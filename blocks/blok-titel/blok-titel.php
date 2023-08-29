@@ -15,6 +15,22 @@ else: /* rendering in editor body */
               <path d="M950.51 53.85C417.98 175.16-.24 73.8-.24 73.8v39.67h1442.08V6.04c-283.77-2.36-464.86 41.01-491.33 47.81z" style="fill:#fff"/>
           </svg>
         </div>
+
+        <a href="#down" class="absolute z-10 top-[20px] left-1/2 transform -translate-x-1/2 hidden md:flex cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
+              <g id="Group_24" data-name="Group 24" transform="translate(-810 -889)">
+                <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(810 889)" fill="none" stroke="#df4550" stroke-width="3">
+                  <circle cx="27" cy="27" r="27" stroke="none"/>
+                  <circle cx="27" cy="27" r="25.5" fill="none"/>
+                </g>
+                <g id="Group_13" data-name="Group 13" transform="translate(-2050.5 -1051.214)">
+                  <rect id="Rectangle_21" data-name="Rectangle 21" width="5" height="15" rx="1" transform="translate(2885 1961)" fill="#df4550"/>
+                  <rect id="Rectangle_22" data-name="Rectangle 22" width="5" height="13" rx="1" transform="translate(2887.328 1958.429) rotate(45)" fill="#df4550"/>
+                  <rect id="Rectangle_23" data-name="Rectangle 23" width="5" height="13" rx="1" transform="translate(2884.136 1961.965) rotate(-45)" fill="#df4550"/>
+                </g>
+              </g>
+            </svg>
+          </a>
       <?php endif; ?>
 
         <div class="<?php the_field("padding_top") ?> <?php the_field("padding_bottom") ?> <?php the_field("background_color") ?> mt-[-1px]">
@@ -27,5 +43,6 @@ else: /* rendering in editor body */
           </div>
         </div>
     </section>
+    <div id="down"></div>
 
 <?php endif; ?>

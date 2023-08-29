@@ -17,7 +17,7 @@
 </head>
 <body <?php body_class( 'page-block relative' ); ?>>
 
-<header class="flex justify-between px-3 md:px-[45px] py-1 lg:py-[25px] fixed z-40 w-screen top-0 right-0 left-0 ">
+<header  class="flex justify-between px-3 md:px-[45px] py-1 lg:py-[25px] fixed z-40 w-screen top-0 right-0 left-0 ">
             <div class="mx-auto lg:mx-0 pl-2 md:pl-0 lg:hidden">
                 <a href="/">
                     <?php  include $_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/obs-wereldwijs/img/icons/logo.php'; ?>

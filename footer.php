@@ -10,7 +10,23 @@
 
 <?php wp_footer(); ?>
 
-<footer class="relative overflow-x-hidden">
+<footer class="relative  overflow-[revert]">
+
+        <a onclick="scrollToTop()" class="absolute z-10 top-[-70px] right-2  md:hidden cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
+              <g id="Group_24" data-name="Group 24" transform="translate(-810 -889)">
+                <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(810 889)" fill="none" stroke="#df4550" stroke-width="3">
+                  <circle cx="27" cy="27" r="27" stroke="none"/>
+                  <circle cx="27" cy="27" r="25.5" fill="none"/>
+                </g>
+                <g id="Group_13" data-name="Group 13" transform="translate(-2050.5 -1051.214)">
+                  <rect id="Rectangle_21" data-name="Rectangle 21" width="5" height="15" rx="1" transform="translate(2885 1961)" fill="#df4550"/>
+                  <rect id="Rectangle_22" data-name="Rectangle 22" width="5" height="13" rx="1" transform="translate(2887.328 1958.429) rotate(45)" fill="#df4550"/>
+                  <rect id="Rectangle_23" data-name="Rectangle 23" width="5" height="13" rx="1" transform="translate(2884.136 1961.965) rotate(-45)" fill="#df4550"/>
+                </g>
+              </g>
+            </svg>
+          </a>
 
     <section class="relative  flex flex-col">
         <div>

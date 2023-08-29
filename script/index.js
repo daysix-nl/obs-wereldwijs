@@ -121,3 +121,9 @@ try {
     });
   });
 } catch (error) {}
+
+try {
+  function scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+} catch (error) {}
