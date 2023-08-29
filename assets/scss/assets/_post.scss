@@ -1,0 +1,185 @@
+.container > .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.text-editor {
+  display: grid;
+  gap: 20px;
+  justify-items: center;
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-align: center;
+    strong {
+      font-weight: bold;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    a {
+      color: #df4550;
+    }
+  }
+
+  ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    list-style-image: none;
+    margin-left: 2rem;
+    color: #054f9c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 11px;
+    line-height: 14px;
+    @media (min-width: 768px) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  ol {
+    list-style-type: decimal;
+    list-style-position: outside;
+    list-style-image: none;
+    margin-left: 2rem;
+    color: #054f9c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      text-align: center;
+    }
+  }
+
+  blockquote {
+    border-left: 2px solid #df4550;
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      padding-left: 1rem;
+    }
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 400;
+    color: #df4550;
+
+    // LG
+    @media (min-width: 845px) {
+      line-height: 54px;
+      font-size: 62px;
+    }
+  }
+
+  a {
+    color: #df4550;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 400;
+    color: #df4550;
+
+    // LG
+    @media (min-width: 845px) {
+      line-height: 48px;
+      font-size: 48px;
+    }
+  }
+
+  p {
+    font-size: 11px;
+    line-height: 14px;
+    font-weight: 400;
+    color: #054f9c;
+
+    // LG
+    @media (min-width: 845px) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+    color: #df4550;
+
+    // LG
+    @media (min-width: 845px) {
+      line-height: 40px;
+      font-size: 40px;
+    }
+  }
+
+  h4 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #df4550;
+
+    // LG
+    @media (min-width: 845px) {
+      line-height: 32px;
+      font-size: 32px;
+    }
+  }
+
+  h5 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #df4550;
+
+    // LG
+    @media (min-width: 845px) {
+      line-height: 28px;
+      font-size: 24px;
+    }
+  }
+
+  h6 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #df4550;
+
+    // LG
+    @media (min-width: 845px) {
+      line-height: 24px;
+      font-size: 20px;
+    }
+  }
+
+  iframe {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16/9 !important;
+    border-radius: 16px !important;
+  }
+
+  img {
+    border-radius: 9px !important;
+    width: 100% !important;
+  }
+}

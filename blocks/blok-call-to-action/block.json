@@ -1,0 +1,27 @@
+{
+    "name": "blok-call-to-action",
+    "title": "Blok - Call to action",
+    "description": "",
+    "category": "bibliotheek",
+    "icon": "editor-insertmore",
+    "keywords": [
+        "block"
+    ],
+    "supports": {
+        "mode": false,
+        "jsx": true
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "blok-call-to-action.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_help": "/wp-content/themes/obs-wereldwijs/img/preview-images/witruimte.jpeg",
+                "is_preview": true
+            }
+        }
+    }
+}

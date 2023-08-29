@@ -1,0 +1,27 @@
+{
+    "name": "container-swoosh",
+    "title": "Container - Swoosh",
+    "description": "",
+    "category": "bibliotheek",
+    "icon": "editor-insertmore",
+    "keywords": [
+        "block"
+    ],
+    "supports": {
+        "mode": false,
+        "jsx": true
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "container-swoosh.php"
+    },
+    "example": {
+        "attributes": {
+            "mode": "preview",
+            "data": {
+                "preview_image_help": "/wp-content/themes/obs-wereldwijs/img/preview-images/witruimte.jpeg",
+                "is_preview": true
+            }
+        }
+    }
+}

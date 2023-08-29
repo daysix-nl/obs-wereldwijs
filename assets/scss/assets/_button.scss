@@ -1,0 +1,46 @@
+.button-underline {
+  span {
+    padding-bottom: 2px;
+  }
+  &:hover {
+    span {
+      padding-bottom: 0px;
+      border-bottom: 2px solid white;
+    }
+  }
+}
+
+.button-underline__withicon {
+  span:not(.icon) {
+    padding-bottom: 2px;
+  }
+  &:hover {
+    span.underline-text {
+      padding-bottom: 0px;
+      border-bottom: 2px solid white;
+    }
+  }
+}
+
+.tab-button {
+  background-color: #cddceb;
+  color: #054f9c;
+  font-size: 11px;
+  height: 33px;
+  max-width: 303px;
+  width: 100%;
+  border-radius: 5px;
+
+  // media query
+
+  @media (min-width: 767px) {
+    font-size: 20px;
+    height: 44px;
+    border-radius: 9px;
+  }
+
+  &.active {
+    background-color: #054f9c;
+    color: #fff;
+  }
+}
