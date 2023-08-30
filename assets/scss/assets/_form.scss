@@ -44,7 +44,6 @@
         visibility: hidden;
       }
       input[type="file"]::before {
-        content: "Upload jouw CV";
         display: inline-block;
         background: #054f9c;
         border-radius: 9px;
@@ -62,12 +61,20 @@
         position: relative;
       }
 
+      #input_1_7::before {
+        content: "Upload jouw CV";
+      }
+
+      #input_1_8::before {
+        content: "Upload jouw motivatie";
+      }
+
       input[type="file"]::after {
         content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 22 22"><g id="Group_197" data-name="Group 197" transform="translate(-5129.313 -6560.497) rotate(45)"><rect id="Rectangle_139" data-name="Rectangle 139" width="7" height="22" transform="translate(8286.804 1001.747) rotate(45)" fill="%23fff"/><rect id="Rectangle_140" data-name="Rectangle 140" width="7" height="22" transform="translate(8271.247 1006.697) rotate(-45)" fill="%23fff"/></g></svg>');
         width: 15px;
         height: 15px;
         position: absolute;
-        left: 40px;
+        left: 15px;
         top: 13px;
       }
     }
