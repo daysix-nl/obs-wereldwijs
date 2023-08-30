@@ -125,8 +125,6 @@ else: /* rendering in editor body */
 
                           $title_event = $result_event->title;
                           $date_event = new DateTime($result_event->date_created);
-
-                          $date = new DateTime('2023-08-18T06:42:01Z');
                           $formattedDate_event = $date_event->format('d.m.Y');
                           $gevonden = true;
                     ?>
