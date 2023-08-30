@@ -53,7 +53,10 @@ else: /* rendering in editor body */
                         } else {
                           break;
                         }
-                        $document = $data_document->results[0]->document;
+                        $document = null;
+                        if ($data_document->count > 0) {
+                          $document = $data_document->results[0]->document;
+                        }
                         ?>
                               <button data-modal-id="modal-<?= $counter ?>" class="w-[200px] md:w-[416px] h-[50px] md:h-[85px] bg-blue rounded-[7px] md:rounded-[15px] py-1 md:py-[25px] px-1 md:px-[35px] flex space-x-1 md:space-x-3 lg:w-full mb-1 md:mb-[45px] last-of-type:mb-0 items-center">
                                 <span class="block w-[17px]  md:w-[35px]">
@@ -81,13 +84,15 @@ else: /* rendering in editor body */
                                           <p class="text-blue font-bold"><?= $posted_by ?></p>
                                         </div>
                                         <p class="text-blue py-5 border-b-[1px] border-[#A2A2A2]/[0.25]"><?= nl2br(htmlspecialchars($description)) ?></p>
-                                        <div class="pt-4"></div>
-                                        <a class="font-bold text-blue px-[25px] bg-blue/20 h-[44px] flex justify-center items-center w-fit rounded-[9px]" href="<?= $document ?>" target="_blank" rel="noopener noreferrer">
-                                          <span class="block mr-2">
-                                            <?php include $_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/obs-wereldwijs/img/icons/download.php'; ?>
-                                          </span>
-                                          <span class="block">Download bijlage</span>
-                                        </a>
+                                        <?php if ($document !== null): ?>
+                                          <div class="pt-4"></div>
+                                          <a class="font-bold text-blue px-[25px] bg-blue/20 h-[44px] flex justify-center items-center w-fit rounded-[9px]" href="<?= $document ?>" target="_blank" rel="noopener noreferrer">
+                                            <span class="block mr-2">
+                                              <?php include $_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/obs-wereldwijs/img/icons/download.php'; ?>
+                                            </span>
+                                            <span class="block">Download bijlage</span>
+                                          </a>
+                                        <?php endif; ?>
                                   </div>
                               </div>
                         <?php
@@ -101,66 +106,47 @@ else: /* rendering in editor body */
           <h2 class="text-red text-30 leading-36 md:leading-82 md:text-68 w-full md:mb-7 mb-[15px] text-center lg:text-left">Agenda</h2>
           <div class="max-w-[200px] md:max-w-[416px] lg:max-w-[unset] mx-auto lg:m-0">
               <?php
-                  $loop = new WP_Query( array(
-                      'post_type' => 'agenda',
-                      'posts_per_page' => 3,
-                      'orderby' => 'date',
-                      'order' => 'DECS',
-                      'offset' => 0,
-                  )
-                  );
 
-                  // Zet de tijdzone, bijvoorbeeld naar de Nederlandse tijdzone
-                  date_default_timezone_set('Europe/Amsterdam');
-                    // Huidige maand als getal (1 voor januari, 12 voor december)
-                    $huidige_maand = date("n");
+                $url_event = "https://api.socialschools.eu/apiv1/public/194801398/event/";
+                
+                $response_event = file_get_contents($url_event);
 
-                    // Huidig jaar
-                    $huidig_jaar = date("Y");
+                if($response_event !== false){
+                    $data_event = json_decode($response_event);
+                    $counter_event = 0;
+                    $max_event = 3;
+                    if($data_event !== null){
+                        foreach($data_event->results as $result_event){
 
-                    // Array met Nederlandse maandnamen
-                    $maand_namen = array("", "januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december");
+                          $counter_event++;
+                          if($counter_event > $max_event){
+                            break;
+                          }
 
-                    // Array om de komende 3 maanden op te slaan
-                    $komende_drie_maanden = [];
+                          $title_event = $result_event->title;
+                          $date_event = new DateTime($result_event->date_created);
 
-                    // Loop om de komende 3 maanden te vinden
-                    for ($i = 0; $i < 3; $i++) {
-                      $komende_maand = $huidige_maand + $i;
-
-                      // Als de komende maand groter is dan 12, reset de maandtelling
-                      if ($komende_maand > 12) {
-                        $komende_maand = $komende_maand - 12;
-                      }
-
-                      // Voeg toe aan de array
-                      $komende_drie_maanden[] = $maand_namen[$komende_maand];
+                          $date = new DateTime('2023-08-18T06:42:01Z');
+                          $formattedDate_event = $date_event->format('d.m.Y');
+                          $gevonden = true;
+                    ?>
+                              <div class="w-[200px] md:w-[416px] h-[50px] md:h-[85px] bg-blue rounded-[7px] md:rounded-[15px] py-1 md:py-[25px] px-1 md:px-[35px] flex space-x-1 md:space-x-3 lg:w-full mb-1 md:mb-[45px] last-of-type:mb-0 items-center">
+                                <span class="block w-[17px]  md:w-[35px]">
+                                  <?php include $_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/obs-wereldwijs/img/icons/agenda.php'; ?>
+                                </span>
+                                <span class="flex flex-col items-start">
+                                  <span class="text-11 leading-13 md:text-20 md:leading-24 text-white text-left md-[5px] md:mb-[10px]"><?= $title_event ?></span>
+                                  <span class="text-8 leading-10 md:text-16 md:leading-19 text-white">| <?= $formattedDate_event ?></span>
+                                </span>
+                              </div>
+                          <?php
+                        }
                     }
+                }
               ?>
-          
-              <?php $gevonden = false; while  ( $loop->have_posts()  ) : $loop->the_post(); $post_id = get_the_ID();  
-              
-                $welke_maand = get_field("welke_maand", $post_id);
-
-                // Als de waarde van welke_maand in de array met komende maanden zit, toon de post
-                if (in_array($welke_maand, $komende_drie_maanden)) :
-                  $gevonden = true;
-              ?>
-                <div class="w-[200px] md:w-[416px] h-[50px] md:h-[85px] bg-blue rounded-[7px] md:rounded-[15px] py-1 md:py-[25px] px-1 md:px-[35px] flex space-x-1 md:space-x-3 lg:w-full mb-1 md:mb-[45px] last-of-type:mb-0 items-center">
-                  <span class="block w-[17px]  md:w-[35px]">
-                    <?php include $_SERVER['DOCUMENT_ROOT'].'/wp-content/themes/obs-wereldwijs/img/icons/agenda.php'; ?>
-                  </span>
-                  <span class="flex flex-col items-start">
-                    <span class="text-11 leading-13 md:text-20 md:leading-24 text-white text-left md-[5px] md:mb-[10px]"><?php the_title(); ?></span>
-                    <span class="text-8 leading-10 md:text-16 md:leading-19 text-white">| <?php the_field("datum", $post_id); ?></span>
-                  </span>
-                </div>
-              <?php  
-              endif;
-              endwhile; wp_reset_query(); ?>
 
               <?php if(!$gevonden): ?>
-                <p class="text-blue text-center md:text-left">Er zijn geen agenda items gevonden voor de komende 3 maanden.</p> 
+                <p class="text-blue text-center md:text-left">Er zijn geen agenda items gevonden.</p> 
              <?php  endif; ?>
 
          
